@@ -1,21 +1,25 @@
-Trader Behavior vs Market Sentiment — Data Science Assignment
+# 📘 Trader Behavior vs Market Sentiment — Data Science Assignment
 
-This project explores how Bitcoin market sentiment (Fear vs Greed) affects trader behavior on Hyperliquid.
-The goal is to uncover patterns in execution, profitability, and risk-taking across different sentiment phases.
+This project analyzes how Bitcoin market sentiment (Fear vs Greed) shapes trader behavior on Hyperliquid.
+The goal is to uncover patterns in trading performance, execution behavior, and risk-taking under different sentiment conditions.
 
-🚀 Project Overview
+# 🚀 Project Overview
 
 You are provided with two datasets:
 
-Bitcoin Fear–Greed Index
-Columns: Date, Classification
+1. Bitcoin Fear–Greed Index
 
-Historical Trader Data (Hyperliquid)
-Columns include:
+Date
+
+Classification (Fear / Greed)
+
+2. Historical Trader Data (Hyperliquid)
+
+Includes fields such as:
 Account, Coin, Execution Price, Size Tokens, Size USD, Side, Timestamp,
-Start Position, Direction, Closed PnL, Order ID, etc.
+Start Position, Direction, Closed PnL, Order ID, and more.
 
-The objective is to analyze how market sentiment influences:
+This project explores how sentiment influences:
 
 Trader profitability
 
@@ -29,7 +33,7 @@ Buy/Sell tendencies
 
 Account-level performance
 
-🛠 Technologies Used
+# 🛠 Technologies Used
 
 Python
 
@@ -43,33 +47,27 @@ Seaborn
 
 Jupyter Notebook
 
-📂 Repository Structure
-├── DS Assignment.ipynb        # Full analysis notebook
-├── fear_greed_index.csv       # Sentiment dataset
-├── historical_data.csv        # Trader dataset
-├── DS Assignment.html         # Exported HTML version
-└── README.md                  # Project documentation
 
-🔍 Key Steps Performed
+# 🔍 Key Steps Performed
 1. Data Cleaning
 
 Parsed timestamps into datetime
 
 Normalized sentiment labels
 
-Cleaned numeric fields
+Converted numeric fields
 
-Removed incomplete and invalid rows
+Removed invalid & inconsistent rows
 
 Created unified date column for merging
 
 2. Dataset Merging
 
-Merged trader executions with Fear–Greed sentiment using the date key.
+Merged the trader dataset with the Fear–Greed index using the date key.
 
 3. Exploratory Data Analysis
 
-Computed:
+Computed important behavioral metrics:
 
 Average PnL
 
@@ -79,69 +77,68 @@ Total PnL
 
 Win-rate (%)
 
-Trade size differences
+Position size differences
 
-Buy/Sell behavior
+Buy/Sell patterns
 
-Account-level PnL patterns
+Account-level performance
 
 4. Visualizations
 
-Created visual insights for:
+Generated clear visual insights:
 
 PnL distribution (Fear vs Greed)
 
-Average PnL
+Average PnL comparison
 
 Win-rate comparison
 
-Trade size in tokens & USD
+Trade size boxplots (Tokens & USD)
 
-📊 Insights & Findings
+# 📊 Insights & Findings
 1. Trader performance varies across sentiment cycles
 
-Greed phases are generally more profitable, while Fear introduces instability.
+Greed phases show stronger profitability, while Fear introduces higher variance and instability.
 
-2. Win-rate increases during Greed
+2. Win-rate improves during Greed
 
-Positive sentiment boosts trader confidence and directional accuracy.
+Positive sentiment increases trader confidence and directional accuracy.
 
-3. Traders use larger position sizes during Greed
+3. Larger position sizes during Greed
 
-Both Token and USD trade size plots confirm more aggressive trading in bullish sentiment.
+Traders take bigger risks in bullish conditions—clear from both token and dollar-based size metrics.
 
 4. Fear periods have wider PnL distributions
 
-Losses and gains become more extreme due to volatility.
+Losses and gains become more extreme during uncertainty and volatility.
 
-5. Buy/Sell tendencies shift
+5. Buy/Sell tendencies shift with sentiment
 
-More BUY trades occur during Greed, while activity becomes defensive during Fear.
+More BUY activity in Greed; more conservative or defensive behavior in Fear.
 
-6. Account-level behavior shows unique patterns
+6. Account-level behavior shows trader archetypes
 
-Some accounts perform better during Fear, signaling contrarian strategies.
+Certain traders perform better during Fear (contrarians), while others thrive during Greed (momentum-driven).
 
-📘 Conclusion
+# 📘 Conclusion
 
-Market sentiment plays a major role in influencing trader behavior:
+Market sentiment strongly shapes trader behavior:
 
-Greed → higher win-rates, larger trades, more buying, smoother PnL
+Greed → Higher win-rates, larger trades, bullish bias, smoother PnL
 
-Fear → volatile outcomes, cautious sizing, erratic profitability
+Fear → Volatile PnL, cautious sizing, unpredictable outcomes
 
-These patterns can help trading teams:
+These insights can help trading teams:
 
 Build sentiment-aware risk models
 
-Develop smarter automated trading filters
+Create smarter automated strategy filters
 
-Identify traders who thrive in different market conditions
+Identify traders who excel in specific sentiment regimes
 
-This analysis demonstrates the value of combining market psychology and trader behavior to improve decision-making.
+This project highlights how combining behavioral analysis + sentiment data leads to deeper trading intelligence.
 
-
-⭐ Author
+# ⭐ Author
 
 Lanson Daniel Bardeskar
 MCA Student • Data Science Enthusiast
